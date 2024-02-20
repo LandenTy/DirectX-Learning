@@ -1,0 +1,10 @@
+D3DXVECTOR3 eye(0.0f, 0.0f, 10.0f);     // Define the camera position
+    D3DXVECTOR3 lookAt(0.0f, 0.0f, 0.0f);    // Define the look-at position
+    D3DXVECTOR3 up(0.0f, 1.0f, 0.0f);        // Define the up direction
+
+    D3DXMATRIX matView;    // the view transform matrix
+
+    D3DXMatrixLookAtLH(&matView,
+                       &eye,        // Pass the address of the camera position
+                       &lookAt,     // Pass the address of the look-at position
+                       &up); 
